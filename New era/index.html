@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEW ERA</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #000;
+            overflow-x: hidden; /* Empêche le défilement horizontal */
+        }
+        header {
+            background-color: rgba(123, 192, 247, 0.9); /* Bleu clair transparent */
+            color: #000; /* Texte en noir */
+            padding: 15px 20px; /* Réduire le padding en haut et en bas */
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            display: flex;
+            justify-content: center; /* Centre les éléments horizontalement */
+            align-items: center;
+            z-index: 1; /* Assure que le header est au-dessus de la vidéo */
+        }
+        .nav-buttons {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+        }
+        .nav-buttons a {
+            background-color: #fff;
+            color: #4b6cb7;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        .nav-buttons a:hover {
+            background-color: #e2e6ea;
+        }
+        .container {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh; /* Hauteur minimale de la fenêtre visible */
+            padding-top: 50px; /* Réduit l'espace au-dessus pour déplacer le contenu vers le haut */
+            text-align: center;
+            color: #000; /* Couleur du texte sur la vidéo */
+            z-index: 0; /* Assure que le contenu est derrière la vidéo */
+        }
+        .image-wrapper {
+            width: 100%;
+            text-align: center;
+            margin-top: -200px; /* Déplace l'image vers le haut */
+        }
+        .image-wrapper img {
+            max-width: 100%; /* Pour s'assurer que l'image ne dépasse pas la largeur du conteneur */
+            height: auto; /* Ajuste automatiquement la hauteur selon la largeur */
+        }
+        .video-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Pour que la vidéo couvre toute la surface */
+            z-index: -1; /* Place la vidéo en arrière-plan */
+        }
+        .card {
+            background-color: rgba(173, 216, 230, 0.8); /* Fond semi-transparent bleu ciel */
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            margin: 20px;
+            padding: 20px;
+            max-width: 600px;
+            text-align: left;
+        }
+        .btn {
+            display: inline-block;
+            background-color: #4b6cb7;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        .btn:hover {
+            background-color: #3a53a4;
+        }
+        footer {
+            background-color: #343a40;
+            color: white;
+            text-align: center;
+            padding: 20px; /* Augmenté pour plus d'espace */
+            width: 100%;
+            position: relative;
+            margin-top: auto; /* Pour pousser vers le bas et être après le contenu principal */
+        }
+        h1 {
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="nav-buttons">
+            <a href="acceuil.html">Accueil</a>
+            <a href="news.html">News</a>
+            <a href="planning.html">Planning</a>
+            <a href="regles.html">Règles</a>
+        </div>
+    </header>
+    <div class="container">
+        <div class="image-wrapper">
+            <img src="New era.png" alt="Image d'en-tête">
+        </div>
+        <video autoplay muted loop class="video-background">
+            <source src="sao.mp4" type="video/mp4">
+            <!-- Utilisez plusieurs sources pour différents formats de vidéo si nécessaire -->
+            <!-- <source src="chemin/vers/ma-video.webm" type="video/webm"> -->
+            <!-- <source src="chemin/vers/ma-video.ogv" type="video/ogg"> -->
+            Your browser does not support the video tag.
+        </video>
+        <div class="card">
+            <h2>Bienvenue dans NewEra</h2>
+            <p>NewEra est un serveur Discord dynamique et accueillant où vous pouvez discuter, partager et vous connecter avec des personnes partageant les mêmes idées. Que vous soyez intéressé par les jeux, la technologie, la musique, ou tout autre sujet, NewEra a quelque chose pour vous.</p>
+        </div>
+        <div class="card">
+            <h2>Rejoignez-nous</h2>
+            <p>Prêt à faire partie de notre communauté? Cliquez sur le lien ci-dessous pour nous rejoindre sur Discord!</p>
+            <a href="https://discord.gg/m5fpMNAzEr" class="btn">Rejoignez NewEra</a>
+        </div>
+    </div>
+    <footer>
+        <div>
+            <p>&copy; 2024 NewEra. Tous droits réservés.</p>
+        </div>
+    </footer>
+</body>
+</html>
